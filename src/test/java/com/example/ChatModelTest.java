@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ChatModelTest extends TestFxInitializer {
+public class ChatModelTest {
 
     @Test
     void addMessageShouldAppend() {
@@ -19,7 +19,7 @@ public class ChatModelTest extends TestFxInitializer {
         model.addMessage(msg);
 
         assertEquals(1, model.getMessages().size());
-        assertEquals(msg, model.getMessages().get(0));
+        assertEquals(msg, model.getMessages().getFirst());
     }
 
     @Test
