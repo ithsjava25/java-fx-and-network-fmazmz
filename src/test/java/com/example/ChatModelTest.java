@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.TestFxInitializer;
 import com.example.domain.ChatModel;
 import com.example.domain.NtfyEventResponse;
 import org.junit.jupiter.api.Test;
