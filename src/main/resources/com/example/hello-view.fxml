@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
 
-<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.HelloController">
-    <children>
-        <Label fx:id="messageLabel" text="Hello, JavaFX!" />
-    </children>
-</StackPane>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.HelloController"
+      spacing="12"
+      style="-fx-padding: 16;"
+      prefWidth="1000"
+      prefHeight="600">
+
+    <ListView fx:id="messagesList"
+              VBox.vgrow="ALWAYS"/>
+
+    <Label fx:id="messageLabel"
+           text=""
+           style="-fx-font-size: 11px; -fx-text-fill: gray;"/>
+
+    <TextField fx:id="titleInput"
+               promptText="Optional title"
+               style="-fx-background-radius: 6;"/>
+
+    <TextField fx:id="tagsInput"
+               promptText="Optional tags (comma separated)"
+               style="-fx-background-radius: 6;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="messageInput"
+                   HBox.hgrow="ALWAYS"
+                   promptText="Write a message..."
+                   style="-fx-background-radius: 6;"/>
+
+        <Button text="+"
+                onAction="#onPickAttachment"
+                style="-fx-font-size: 16px; -fx-background-radius: 6;"/>
+
+        <Button text="Send"
+                style="-fx-background-radius: 6;"
+                onAction="#onSend"/>
+    </HBox>
+
+</VBox>

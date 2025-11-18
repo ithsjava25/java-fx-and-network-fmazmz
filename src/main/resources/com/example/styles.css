@@ -1,0 +1,86 @@
+/* Global dark background */
+.root {
+    -fx-background-color: #1b1b1d;
+}
+
+/* ListView container */
+.list-view {
+    -fx-background-color: #1b1b1d;
+    -fx-padding: 10;
+}
+
+/* Remove default selection white flash */
+.list-cell:filled:selected,
+.list-cell:filled:selected:focused {
+    -fx-background-color: transparent;
+}
+
+/* Remove default hover flash */
+.list-cell:hover {
+    -fx-background-color: transparent;
+}
+
+/* Base cell styling */
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 6 0 6 0;
+}
+
+/* Dark message bubble */
+.message-bubble {
+    -fx-background-color: #2a2a2d;
+    -fx-background-radius: 10;
+    -fx-padding: 10 14 10 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.30), 10, 0, 0, 2);
+}
+
+/* Hover effect for message bubble */
+.list-cell:hover .message-bubble {
+    -fx-background-color: #353538;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.05), 16, 0, 0, 1);
+}
+
+/* Title text */
+.message-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8e8e8;
+}
+
+/* Message text */
+.message-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #f5f5f5;
+}
+
+/* Tags text */
+.message-tags {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6aa0ff;
+}
+
+/* Timestamp */
+.message-time {
+    -fx-font-size: 10px;
+    -fx-text-fill: #a0a0a0;
+}
+
+/* Inputs styling */
+.text-field {
+    -fx-background-color: #2a2a2d;
+    -fx-text-fill: #f5f5f5;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-prompt-text-fill: #777777;
+}
+
+/* Send button */
+.button {
+    -fx-background-color: #3d66ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+.button:hover {
+    -fx-background-color: #5176ff;
+}
